@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accordion</title>
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+	<!-- extra fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+	<style>
+		.container {
+			width: 1200px;
+			max-width: 90%;
+			padding: 20px 50px;
+		}
+
+		.header-accordion h1 {
+			font-size: 2rem;
+			font-weight: 700;
+			font-style: italic;
+			color: #daba08;
+			text-align: center;
+		}
+
+		.question {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px;
+
+		}
+
+		.article {
+			width: 80%;
+			margin: auto;
+			background-color: #f2f2f2;
+			margin-top: 20px;
+			padding: 10px;
+			border: 1px solid #eee;
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.245);
+		}
+
+		.question-heading {
+			font-size: 1.3rem;
+			font-weight: 600;
+			color: #6b0415;
+			padding-bottom: 10px;
+		}
+
+		.question-answer p {
+			font-style: italic;
+			color: #97820a;
+		}
+
+		.question-answer {
+			display: none;
+		}
+
+		.show-answer .question-answer {
+			display: block;
+		}
+
+
+
+		button {
+			border: none;
+			outline: none;
+			font-size: 1.3rem;
+			border-radius: 100%;
+		}
+
+		.fa-chevron-up {
+			color: #6b0415;
+			font-weight: 700;
+			display: block;
+		}
+
+		.fa-chevron-down {
+			display: none;
+			color: #6b0415;
+			font-weight: 700;
+		}
+
+		.show-answer .fa-chevron-up {
+			display: none;
+		}
+
+		.show-answer .fa-chevron-down {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="header-accordion">
+			<h1>General Questions</h1>
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						1. Non-primitive types
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>Primitive data types can store only a single value. To store multiple and complex values,
+						non-primitive data types are used.
+						Object - Used to store collection of data.</p>
+				</div>
+			</div>
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						2. Explain Hoisting in javascript.
+
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>This means that irrespective of where the variables and functions are declared, they are moved on top
+						of the scope. The scope can be both local and global.</p>
+				</div>
+			</div>
+
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						3. Why do we use the word “debugger” in javascript?
+
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>The debugger for the browser must be activated in order to debug the code. Built-in debuggers may be
+						switched on and off, requiring the user to report faults</p>
+				</div>
+			</div>
+
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						4. What are the different data types present in javascript?
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>String - It represents a series of characters and is written with quotes. A string can be represented
+						using a single or a double quote.
+
+					</p>
+				</div>
+			</div>
+
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						5. Difference between “ == “ and “ === “ operators.
+
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>
+						Both are comparison operators. The difference between both the operators is that “==” is used to
+						compare values whereas, “ === “ is used to compare both values and types.
+					</p>
+				</div>
+			</div>
+
+			<div class="article">
+				<div class="question">
+					<div class="question-heading">
+						6. Difference between var and let keyword in javascript.
+
+					</div>
+					<button class="toggle-btn">
+						<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						<i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="question-answer">
+					<p>
+						From the very beginning, the 'var' keyword was used in JavaScript programming whereas the keyword
+						'let' was just added in 2015.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		// const allButtons = document.querySelectorAll(".toggle-btn");
+		// console.log(allButtons);
+		// const fa = document.querySelector(".fa");
+
+		// allButtons.forEach(button => {
+		// 	button.addEventListener("click", (e) => {
+		// 		// console.log(e.currentTarget.parentElement.parentElement)
+				
+				
+		// 		const answer = e.currentTarget.parentElement.parentElement;
+		// 		answer.classList.toggle("show-answer")
+				
+		// 		console.log(e.currentTarget.parentElement.parentElement)
+				
+				
+		// 	});
+		// });
+
+		
+		const article=document.querySelectorAll(".article");
+		console.log(article);
+		
+		article.forEach((question)=>{
+			console.log(question);
+			
+			const btn=question.querySelector(".toggle-btn");
+			// console.log(btn);
+			
+			btn.addEventListener("click",(e)=>{
+				
+				article.forEach((item)=>{
+					console.log(item);
+					if(item !== question)
+					{
+						item.classList.remove("show-answer");
+					}
+				});
+				question.classList.toggle("show-answer");
+			});
+			
+		});
+		
+		
+
+	</script>
+</body>
+
+</html>
