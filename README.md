@@ -1,4 +1,4 @@
-# Portfolio
+# ACCORDION
   Here i have designed Accordion   
 
 ## Project timeline and technologies used
