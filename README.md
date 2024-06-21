@@ -12,4 +12,5 @@
 - Javascript
 
 ##Lets See Design
-[lets see design](https://vidyagali.github.io/Accordion/)
+[lets see design]
+(https://vidyagali.github.io/Accordion/)
